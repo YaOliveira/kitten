@@ -1,0 +1,39 @@
+body {
+    background-image: url("img/sunny-day.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 50vh);
+    margin: 0;
+    padding: 0;
+  }
+  
+  #kitten {
+    background-image: url('img/kitten-medium.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* grid-column: 2 / span 1; (Com esse o gato fica proporcional ao tamanho do background)*/
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+  
+    @media screen and (max-width: 900px) {
+      body{
+        background-image: url('img/dawn.png');
+      }
+      #kitten{
+        background-image: url('img/kitten-large.png');
+      }
+    }
+    
+    @media screen and (max-width: 500px) {
+      body{
+        background-image: url('img/night.jpg');
+      }
+      #kitten{
+        background-image: url('img/kitten-small.png')
+      }
+    }
